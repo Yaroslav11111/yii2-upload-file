@@ -1,0 +1,20 @@
+{
+  "name": "yii2-file-upload",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaroslav11111/yii2-upload-file.git"
+  },
+  "author": "Eugene Terentev",
+  "bugs": {
+    "url": "https://github.com/Yaroslav11111/yii2-upload-file/issues"
+  },
+  "homepage": "https://github.com/Yaroslav11111/yii2-upload-file#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2"
+  }
+}
