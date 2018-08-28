@@ -1,6 +1,6 @@
 <?php
 
-namespace trntv\filekit\tests;
+namespace snizhko\fileupload\tests;
 
 use yii\di\Container;
 use yii\helpers\ArrayHelper;

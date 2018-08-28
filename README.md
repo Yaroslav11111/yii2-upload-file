@@ -36,14 +36,14 @@ To work with the File Kit you need to configure FileStorage first. This componen
 - Its main task to take on the generation of a unique name for each file and trigger corresponding events.
 ```php
 'fileStorage'=>[
-    'class' => 'trntv\filekit\Storage',
+    'class' => 'snizhko\fileupload\Storage',
     'baseUrl' => '@web/uploads'
     'filesystem'=> ...
         // OR
     'filesystemComponent' => ...    
 ],
 ```
-There are several ways to configure `trntv\filekit\Storage` to work with `flysystem`.
+There are several ways to configure `snizhko\fileupload\Storage` to work with `flysystem`.
 
 ## Using Closure
 ```php
@@ -56,7 +56,7 @@ There are several ways to configure `trntv\filekit\Storage` to work with `flysys
 ]
 ```
 ## Using filesystem builder 
-- Create a builder class that implements `trntv\filekit\filesystem\FilesystemBuilderInterface` and implement method `build` which returns filesystem object. See ``examples/``
+- Create a builder class that implements `snizhko\fileupload\filesystem\FilesystemBuilderInterface` and implement method `build` which returns filesystem object. See ``examples/``
 - Add to your configuration:
 ```php
 'fileStorage'=>[
@@ -102,7 +102,7 @@ Designed to save the file uploaded by the widget
 public function actions(){
     return [
            'upload'=>[
-               'class'=>'trntv\filekit\actions\UploadAction',
+               'class'=>'snizhko\fileupload\actions\UploadAction',
                //'deleteRoute' => 'my-custom-delete', // my custom delete action for deleting just uploaded files(not yet saved)
                //'fileStorage' => 'myfileStorage', // my custom fileStorage from configuration
                'multiple' => true,
@@ -139,7 +139,7 @@ See additional settings in the corresponding class
 public function actions(){
     return [
        'delete'=>[
-           'class'=>'trntv\filekit\actions\DeleteAction',
+           'class'=>'snizhko\fileupload\actions\DeleteAction',
            //'fileStorage' => 'fileStorageMy', // my custom fileStorage from configuration(such as in the upload action)
        ]
     ];
@@ -152,7 +152,7 @@ See additional settings in the corresponding class
 public function actions(){
     return [
        'view'=>[
-           'class'=>'trntv\filekit\actions\ViewAction',
+           'class'=>'snizhko\fileupload\actions\ViewAction',
        ]
     ];
 }
@@ -162,7 +162,7 @@ See additional settings in the corresponding class
 # Upload Widget
 Standalone usage
 ```php
-echo \trntv\filekit\widget\Upload::widget([
+echo \snizhko\fileupload\widget\Upload::widget([
     'model' => $model,
     'attribute' => 'files',
     'url' => ['upload'],
@@ -179,7 +179,7 @@ echo \trntv\filekit\widget\Upload::widget([
 With ActiveForm
 ```php
 echo $form->field($model, 'files')->widget(
-    '\trntv\filekit\widget\Upload',
+    '\snizhko\fileupload\widget\Upload',
     [
         'url' => ['upload'],
         'sortable' => true,
@@ -217,7 +217,7 @@ For multiple files
  {
     return [
         'file' => [
-            'class' => 'trntv\filekit\behaviors\UploadBehavior',
+            'class' => 'snizhko\fileupload\behaviors\UploadBehavior',
             'filesStorage' => 'myfileStorage', // my custom fileStorage from configuration(for properly remove the file from disk)
             'multiple' => true,
             'attribute' => 'files',
@@ -239,7 +239,7 @@ For single file upload
  {
      return [
           'file' => [
-              'class' => 'trntv\filekit\behaviors\UploadBehavior',
+              'class' => 'snizhko\fileupload\behaviors\UploadBehavior',
               'filesStorage' => 'fileStorageMy', // my custom fileStorage from configuration(for properly remove the file from disk)
               'attribute' => 'file',
               'pathAttribute' => 'path',
@@ -271,7 +271,7 @@ Edit your upload actions as so
 public function actions(){
     return [
            'upload'=>[
-               'class'=>'trntv\filekit\actions\UploadAction',
+               'class'=>'snizhko\fileupload\actions\UploadAction',
                ...
                'on afterSave' => function($event) {
                     /* @var $file \League\Flysystem\File */

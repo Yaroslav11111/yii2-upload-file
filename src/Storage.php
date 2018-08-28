@@ -1,16 +1,16 @@
 <?php
-namespace trntv\filekit;
+namespace snizhko\fileupload;
 
 use Yii;
 use League\Flysystem\FilesystemInterface;
-use trntv\filekit\events\StorageEvent;
-use trntv\filekit\filesystem\FilesystemBuilderInterface;
+use snizhko\fileupload\events\StorageEvent;
+use snizhko\fileupload\filesystem\FilesystemBuilderInterface;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 
 /**
  * Class Storage
- * @package trntv\filekit
+ * @package snizhko\fileupload
  * @author Eugene Terentev <eugene@terentev.net>
  */
 class Storage extends Component
@@ -208,7 +208,7 @@ class Storage extends Component
      */
     public function beforeSave($path, $filesystem = null)
     {
-        /* @var \trntv\filekit\events\StorageEvent $event */
+        /* @var \snizhko\fileupload\events\StorageEvent $event */
         $event = Yii::createObject([
             'class' => StorageEvent::className(),
             'path' => $path,
@@ -224,7 +224,7 @@ class Storage extends Component
      */
     public function afterSave($path, $filesystem)
     {
-        /* @var \trntv\filekit\events\StorageEvent $event */
+        /* @var \snizhko\fileupload\events\StorageEvent $event */
         $event = Yii::createObject([
             'class' => StorageEvent::className(),
             'path' => $path,
@@ -240,7 +240,7 @@ class Storage extends Component
      */
     public function beforeDelete($path, $filesystem)
     {
-        /* @var \trntv\filekit\events\StorageEvent $event */
+        /* @var \snizhko\fileupload\events\StorageEvent $event */
         $event = Yii::createObject([
             'class' => StorageEvent::className(),
             'path' => $path,
@@ -256,7 +256,7 @@ class Storage extends Component
      */
     public function afterDelete($path, $filesystem)
     {
-        /* @var \trntv\filekit\events\StorageEvent $event */
+        /* @var \snizhko\fileupload\events\StorageEvent $event */
         $event = Yii::createObject([
             'class' => StorageEvent::className(),
             'path' => $path,

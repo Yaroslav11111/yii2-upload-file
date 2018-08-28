@@ -1,8 +1,8 @@
 <?php
 
-namespace trntv\filekit\tests;
+namespace snizhko\fileupload\tests;
 
-use trntv\filekit\Storage;
+use snizhko\fileupload\Storage;
 
 /**
  * @author Eugene Terentev <eugene@terentev.net>
@@ -13,7 +13,7 @@ class StorageTest extends TestCase
     {
         $storage = new Storage([
             'filesystem' => [
-                'class' => 'trntv\filekit\tests\data\TmpFilesystemBuilder'
+                'class' => 'snizhko\fileupload\tests\data\TmpFilesystemBuilder'
             ]
         ]);
 

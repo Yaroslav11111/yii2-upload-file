@@ -1,12 +1,12 @@
 <?php
 
-namespace trntv\filekit\actions;
+namespace snizhko\fileupload\actions;
 
 use yii\web\HttpException;
 
 /**
  * Class ViewAction
- * @package trntv\filekit\actions
+ * @package snizhko\fileupload\actions
  * @author Eugene Terentev <eugene@terentev.net>
  */
 class ViewAction extends BaseAction

@@ -3,7 +3,7 @@
  * Author: Eugine Terentev <eugine@terentev.net>
  */
 
-namespace trntv\filekit\widget;
+namespace snizhko\fileupload\widget;
 
 use yii\web\AssetBundle;
 
@@ -13,7 +13,7 @@ class UploadAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
         'yii\bootstrap\BootstrapAsset',
-        'trntv\filekit\widget\BlueimpFileuploadAsset'
+        'snizhko\fileupload\widget\BlueimpFileuploadAsset'
     ];
 
     public $sourcePath = __DIR__ . '/assets';

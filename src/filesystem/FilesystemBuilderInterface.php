@@ -1,9 +1,9 @@
 <?php
-namespace trntv\filekit\filesystem;
+namespace snizhko\fileupload\filesystem;
 
 /**
  * Interface FilesystemBuilderInterface
- * @package trntv\filekit\filesystem
+ * @package snizhko\fileupload\filesystem
  */
 interface FilesystemBuilderInterface
 {

@@ -9,7 +9,7 @@ use yii\base\BaseObject;
  * @author Eugene Terentev <eugene@terentev.net>*
  *
  */
-class LocalFilesystemBuilder extends BaseObject implements \trntv\filekit\filesystem\FilesystemBuilderInterface
+class LocalFilesystemBuilder extends BaseObject implements \snizhko\fileupload\filesystem\FilesystemBuilderInterface
 {
     /**
      * @var

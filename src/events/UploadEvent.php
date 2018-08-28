@@ -1,10 +1,10 @@
 <?php
-namespace trntv\filekit\events;
+namespace snizhko\fileupload\events;
 use yii\base\Event;
 
 /**
  * Class UploadEvent
- * @package trntv\filekit\events
+ * @package snizhko\fileupload\events
  * @author Eugene Terentev <eugene@terentev.net>
  */
 class UploadEvent extends Event

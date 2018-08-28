@@ -1,13 +1,13 @@
 <?php
-namespace trntv\filekit\actions;
+namespace snizhko\fileupload\actions;
 
-use trntv\filekit\Storage;
+use snizhko\fileupload\Storage;
 use yii\base\Action;
 use yii\di\Instance;
 
 /**
  * Class BaseAction
- * @package trntv\filekit\actions
+ * @package snizhko\fileupload\actions
  * @author Eugene Terentev <eugene@terentev.net>
  */
 abstract class BaseAction extends Action
@@ -31,7 +31,7 @@ abstract class BaseAction extends Action
     public $allowChangeFilestorage = false;
 
     /**
-     * @return \trntv\filekit\Storage
+     * @return \snizhko\fileupload\Storage
      * @throws \yii\base\InvalidConfigException
      */
     protected function getFileStorage()

@@ -1,9 +1,9 @@
 <?php
-namespace trntv\filekit\tests\data;
+namespace snizhko\fileupload\tests\data;
 
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
-use trntv\filekit\filesystem\FilesystemBuilderInterface;
+use snizhko\fileupload\filesystem\FilesystemBuilderInterface;
 
 /**
  * @author Eugene Terentev <eugene@terentev.net>

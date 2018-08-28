@@ -6,18 +6,18 @@
  * Time: 1:20 PM
  */
 
-namespace trntv\filekit\actions;
+namespace snizhko\fileupload\actions;
 
 use yii\web\HttpException;
 use League\Flysystem\FilesystemInterface;
-use trntv\filekit\events\UploadEvent;
+use snizhko\fileupload\events\UploadEvent;
 use League\Flysystem\File as FlysystemFile;
 
 /**
  * public function actions(){
  *   return [
  *           'upload'=>[
- *               'class'=>'trntv\filekit\actions\DeleteAction',
+ *               'class'=>'snizhko\fileupload\actions\DeleteAction',
  *               'on afterDelete' => function($event) {
  *                   $file = $event->file;
  *                   $thumb_path = Yii::getAlias('@storage/web/source/thumb/') . $file->getPath();

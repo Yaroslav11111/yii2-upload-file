@@ -1,5 +1,5 @@
 <?php
-namespace trntv\filekit\widget;
+namespace snizhko\fileupload\widget;
 
 use yii\web\AssetBundle;
 
