@@ -91,6 +91,22 @@
                                 methods.showError(file.errors)
                             }
 
+                            //size img if width is in the from
+                            if($('.banner-width').length > 0)
+                            {
+                                var img = $("#t2")[0]; // Get my img elem
+                                var pic_real_width, pic_real_height;
+                                $("<img/>") // Make in memory copy of image to avoid css issues
+                                    .attr("src", $(img).attr("src"))
+                                    .on('load',function() {
+                                        pic_real_width = this.width;   // Note: $(this).width() will not
+                                        pic_real_height = this.height; // work for in memory images.
+                                        $('.banner-width').val(pic_real_width);
+                                        $('.banner-height').val(pic_real_height);
+                                    });
+                            }
+
+
                         });
                         methods.handleEmptyValue();
                         methods.checkInputVisibility();
